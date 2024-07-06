@@ -12,3 +12,34 @@ console.log('Max age:', maxAge);
 
 // Find the median age (one middle item or two middle items divided by two)
 
+let median;
+
+const mid = Math.floor(ages.length / 2);
+if (ages.length % 2 === 0) {
+  median = (ages[mid - 1] + ages[mid]) / 2;
+} else {
+  median = ages[mid];
+}
+
+console.log('Median age:', median);
+
+// Find the average age (all items divided by number of items)
+
+const sum = ages.reduce((a, b) => a + b, 0);
+const average = sum / ages.length;
+
+console.log('Average age:', average);
+
+// Find the range of the ages 
+
+const range = maxAge - minAge;
+
+console.log('Range of ages:', range);
+
+// Compare the value of (min - average) and (max - average)
+
+const minAverageDifference = Math.abs(minAge - average);
+const maxAverageDifference = Math.abs(maxAge - average);
+
+console.log('Min - Average:', minAverageDifference);
+console.log('Max - Average:', maxAverageDifference);
