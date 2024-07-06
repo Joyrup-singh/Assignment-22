@@ -9,8 +9,8 @@ const shoppingCart = ["Milk", "Coffee", "Tea", "Honey"]
 
 let addFirstItem = shoppingCart.unshift("Meat");
 let addLastItem = shoppingCart.push("Sugar");
-shoppingCart.splice(4, 1);
-shoppingCart[3] = "Green Tea";
+let removeItem = shoppingCart.splice(4, 1);
+let changeItem = shoppingCart[3] = "Green Tea";
 
 
 console.log(shoppingCart);
